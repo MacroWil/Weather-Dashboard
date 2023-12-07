@@ -18,23 +18,19 @@
   </head>
   <body>
     <h1>Weather Dashboard</h1>
-    <section class="searchForCity"></section>
-    <div class="container mt-5">
-      <div class="row justify-content-left">
-        <div class="col-md-6">
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search for a city or town"
-              aria-label="Search"
-              aria-describedby="basic-addon2"
-            />
-            <button class="btn btn-primary" type="button">Search</button>
+    <section class="searchForCity">
+      <div class="container mt-5">
+          <div class="row justify-content-left">
+              <div class="col-md-6">
+                  <div class="input-group mb-3">
+                      <input type="text" id="cityInput" class="form-control" placeholder="Search for a city or town">
+                      <button class="btn btn-primary" type="button" onclick="addCityBtn()">Search</button>
+                  </div>
+                  <div id="cityButtonsContainer" class="mt-3"></div>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
+  </section>
     <section class="weatherCurrent">
       <div class="container1">
         <h2>
