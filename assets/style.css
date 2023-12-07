@@ -1,10 +1,11 @@
 h1 {
     text-align: center;
     align-items: center;
-    background-color: azure;
+    background-color: #bce1ea;
     margin-top: 2%;
     padding-bottom: 2%;
     font-family: 'Playfair Display', serif;
+    border-bottom: solid black 2px;
 }
 
 #cityInput {
@@ -16,5 +17,14 @@ h1 {
 .container1 {
     max-width: 50%;
 }
-=======
 
+.col-sm {
+    border: solid black 2px;
+    background-color: #bce1ea;
+    color: black;
+    margin:1%;
+    padding:1%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    border-radius: 5px;
+}
