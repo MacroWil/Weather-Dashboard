@@ -11,3 +11,16 @@ function getApi() {
     });
 }
 getApi();
+
+$(document).ready(function () {
+    
+    $(".btn").on("click", function () {
+        var city = $(this).siblings(".form-control").val();
+        localStorage.setItem("city", city);     
+        console.log(city);
+    })
+    
+})
+
+
+
