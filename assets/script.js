@@ -22,3 +22,27 @@ $(document).ready(function () {
       });
   });
 });
+
+function addCityBtn() {
+  // gets the city the user types in
+  var cityInput = document.getElementById('cityInput');
+  // removes spaces before/after
+  var cityName = cityInput.value.trim();
+  // if city name isnt empty, run function, prevents someone from just putting spaces and outputting a button
+  if (cityName !== '') {
+      // creates button below search bar
+      var button = document.createElement('button');
+      button.className = 'btn btn-secondary mr-2';
+      button.textContent = cityName;
+      // event listener for click on search
+      button.addEventListener('click', function() {
+          console.log(cityName);
+      });
+      // creates var for container in html to insert city name
+      var cityButtonsContainer = document.getElementById('cityButtonsContainer');
+      // puts name in container
+      cityButtonsContainer.append(button);
+      //clears city input var
+      cityInput.value = '';
+  }
+}
