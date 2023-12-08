@@ -20,46 +20,49 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header>
-      <h1>Weather Dashboard</h1>
-      <section clas="citySearchH2Container">
-        <section class="searchForCity">
-          <div class="row justify-content-left">
-            <div class="col-md-6">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  id="cityInput"
-                  class="form-control"
-                  placeholder="Search for a city using the format City, state"
-                />
-                <button class="btn btn-primary" type="button">Search</button>
-              </div>
-              <div id="button" class="mt-3"></div>
+
+  <header>
+    <h1>Weather Dashboard</h1>
+    <section clas="citySearchH2Container">
+      <section class="searchForCity">
+        <div class="row">
+          <div class="col-md-4 justify-content-left">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                id="cityInput"
+                class="form-control"
+                placeholder="Search for a city using the format City, state"
+              />
+              <button class="btn btn-primary" type="button">Search</button>
             </div>
+            <div id="button" class="mt-3"></div>
           </div>
-          <div class="container1">
-            <div class="today">
-              <div class="city">
-                <span class="city-name"></span>
-                <span class="wind-speed"></span>
-                <span class="humidity"></span>
-              </div>
-            </div>
-            <div>
-              <div class="row">
-                <div class="col-sm day1"></div>
-                <div class="col-sm day2"></div>
-                <div class="col-sm day3"></div>
-                <div class="col-sm day4"></div>
-                <div class="col-sm day5"></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </section>
-    </header>
+    </section>
+  </header>
+  <body>
+    <main>
+      <div class="container1 z1">
+        <div class="today">
+          <div class="city">
+            <span class="city-name"></span>
+            <span class="wind-speed"></span>
+            <span class="humidity"></span>
+          </div>
+        </div>
+        <div>
+          <div class="forecast">
+            <span class="forecastCol day1"></span>
+            <span class="forecastCol day2"></span>
+            <span class="forecastCol day3"></span>
+            <span class="forecastCol day4"></span>
+            <span class="forecastCol day5"></span>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/script.js"></script>
