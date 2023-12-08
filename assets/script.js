@@ -3,6 +3,7 @@ var todayResponseObj;
 
 displaySaved();
 $(".weatherForecast").hide();
+$(".container1").hide();
 
 $(document).ready(function () {
   $(".btn").on("click", function () {
@@ -110,6 +111,7 @@ function clickHandler() {
 
 function displayDays() {
   $(".weatherForecast").show();
+  $(".container1").show();
   var todayIconUrl =
     "http://openweathermap.org/img/w/" +
     todayResponseObj.weather[0].icon +
@@ -141,8 +143,9 @@ function displayDays() {
   $(".day4").empty();
   $(".day5").empty();
   $(".today").append(
-    todayResponseObj.name +
-      "<br />" +
+    "<h2> Today in " +
+      todayResponseObj.name +
+      "</h2>" +
       todayResponseObj.weather[0].description +
       "<br />" +
       '<img src="' +
