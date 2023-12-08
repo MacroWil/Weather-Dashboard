@@ -143,7 +143,7 @@ function displayDays() {
   $(".day4").empty();
   $(".day5").empty();
   $(".today").append(
-    "<h2> Today in " +
+    "<h2> Today in 3" +
       todayResponseObj.name +
       "</h2>" +
       todayResponseObj.weather[0].description +
