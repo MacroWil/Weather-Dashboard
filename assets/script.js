@@ -1,5 +1,6 @@
 var responseObj;
 var todayResponseObj;
+
 displaySaved();
 $(".weatherForecast").hide();
 
@@ -142,7 +143,7 @@ function displayDays() {
       "<br />" +
       "Wind Speed: " +
       todayResponseObj.wind.speed +
-      "Mph" +
+      " Mph" +
       "<br />"
   );
   $(".day1").append(
@@ -165,7 +166,7 @@ function displayDays() {
       "<br />" +
       "Wind Speed: " +
       responseObj.list[0].wind.speed +
-      "Mph" +
+      " Mph" +
       "<br />"
   );
   $(".day2").append(
@@ -188,7 +189,7 @@ function displayDays() {
       "<br />" +
       "Wind Speed: " +
       responseObj.list[8].wind.speed +
-      "Mph" +
+      " Mph" +
       "<br />"
   );
   $(".day3").append(
@@ -211,7 +212,7 @@ function displayDays() {
       "<br />" +
       "Wind Speed: " +
       responseObj.list[16].wind.speed +
-      "Mph" +
+      " Mph" +
       "<br />"
   );
   $(".day4").append(
@@ -234,7 +235,7 @@ function displayDays() {
       "<br />" +
       "Wind Speed: " +
       responseObj.list[24].wind.speed +
-      "Mph" +
+      " Mph" +
       "<br />"
   );
   $(".day5").append(
@@ -257,7 +258,13 @@ function displayDays() {
       "<br />" +
       "Wind Speed: " +
       responseObj.list[32].wind.speed +
-      "Mph" +
+      " Mph" +
       "<br />"
   );
 }
+
+// console.log(todayResponseObj.name);
+// var newCityName = todayResponseObj.name;
+// var cityNameElement = $(".today .city-name");
+// console.log(cityNameElement);
+// cityNameElement.html("<strong>" + newCityName + "</strong>");
