@@ -8,10 +8,15 @@ $(document).ready(function () {
   $(".btn").on("click", function () {
     var city = $(this).siblings(".form-control").val();
     city.split(" ").join("");
+
+    if (city == "") {
+      alert('Please enter a city with the format "City, state"');
+      return;
+    }
+
     var saved = JSON.parse(localStorage.getItem("city")) || [];
     saved.push({ city: city });
     localStorage.setItem("city", JSON.stringify(saved));
-    console.log(city);
 
     var requestUrl =
       "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -20,12 +25,15 @@ $(document).ready(function () {
 
     fetch(requestUrl)
       .then(function (response) {
+        if (!response.ok) {
+          alert('Please enter a city with the format "City, state"');
+          throw response.json();
+        }
         return response.json();
       })
       .then(function (data) {
         responseObj = data;
         getToday();
-        console.log(data);
       });
     function getToday() {
       var todayUrl =
@@ -34,13 +42,16 @@ $(document).ready(function () {
         "&appid=12514b6cc41c0bd6caa2545307713489&units=imperial";
       fetch(todayUrl)
         .then(function (response) {
+          if (!response.ok) {
+            alert('Please enter a city with the format "City, state"');
+            throw response.json();
+          }
           return response.json();
         })
         .then(function (data) {
           todayResponseObj = data;
           displaySaved();
           displayDays();
-          console.log(data);
         });
     }
   });
@@ -57,23 +68,25 @@ function displaySaved() {
 }
 
 function clickHandler() {
-  console.log(this);
   var city = $(this).text();
   city.split(" ").join("");
-  console.log(city);
+
   var requestUrl =
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
     city +
     "&appid=12514b6cc41c0bd6caa2545307713489&units=imperial";
-  console.log(requestUrl);
+
   fetch(requestUrl)
     .then(function (response) {
+      if (!response.ok) {
+        alert('Please enter a city with the format "City, state"');
+        throw response.json();
+      }
       return response.json();
     })
     .then(function (data) {
       responseObj = data;
       getToday();
-      console.log(data);
     });
   function getToday() {
     var todayUrl =
@@ -82,12 +95,15 @@ function clickHandler() {
       "&appid=9706e7b05bd2f565a4b235b43ca7c59c&units=imperial";
     fetch(todayUrl)
       .then(function (response) {
+        if (!response.ok) {
+          alert('Please enter a city with the format "City, state"');
+          throw response.json();
+        }
         return response.json();
       })
       .then(function (data) {
         todayResponseObj = data;
         displayDays();
-        console.log(todayResponseObj);
       });
   }
 }
@@ -262,9 +278,3 @@ function displayDays() {
       "<br />"
   );
 }
-
-// console.log(todayResponseObj.name);
-// var newCityName = todayResponseObj.name;
-// var cityNameElement = $(".today .city-name");
-// console.log(cityNameElement);
-// cityNameElement.html("<strong>" + newCityName + "</strong>");
