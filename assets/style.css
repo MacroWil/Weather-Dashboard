@@ -17,7 +17,6 @@ h1 {
   padding: 8px;
 }
 .searchForCity {
-  
   margin-left: 2%;
   margin-top: 2%;
 }
@@ -30,7 +29,6 @@ h1 {
 .container1 {
   max-width: 50%;
   margin-top: 2%;
-  
 }
 
 .button {
@@ -45,7 +43,7 @@ h1 {
 
 .button:hover {
   background-color: #ddd;
-  border: solid .25px black;
+  border: solid 0.25px black;
 }
 
 .today {
@@ -54,7 +52,7 @@ h1 {
   display: block;
   left: 56%;
   top: 11%;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 1rem;
   padding: 1%;
   line-height: 1.5;
@@ -65,11 +63,8 @@ h1 {
   font-weight: 100;
 }
 
- 
-
 .container1 {
   max-width: 50%;
-  
 }
 
 .weatherForecast {
@@ -82,12 +77,12 @@ h1 {
   color: black;
   margin: 1%;
   padding: 1%;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: 200;
   border-radius: 5px;
   margin-top: 10%;
   position: relative;
-  left: 80%;
+  left: 20%;
+  max-width: 20%;
   bottom: 250px;
-  
 }
