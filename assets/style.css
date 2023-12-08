@@ -48,22 +48,32 @@ h1 {
 }
 
 .today {
-  margin-top: 2%;
+  margin-top: 3%;
   position: absolute;
+  display: block;
   left: 42%;
   top: 11%;
   font-family: 'Jost', sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1%;
   line-height: 1.5;
+  border: solid black 2px;
+  width: 50%;
+  margin-bottom: 10%;
+  border-radius: 5px;
+  font-weight: 100;
+  background-color: hotpink;
+ 
 }
+
+ 
 
 .container1 {
   max-width: 50%;
 }
 
 .weatherForecast {
-  margin-top: 1%;
+  margin-top: 9%;
 }
 
 .col-sm {
