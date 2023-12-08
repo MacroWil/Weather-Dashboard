@@ -6,4 +6,4 @@ Link to site: https://macrowil.github.io/Weather-Dashboard/
 
 Link to repository: https://github.com/MacroWil/Weather-Dashboard
 
-![model](./assets/WeatherApp.jpg)
+![model](./assets/expectedbehavior.png)
