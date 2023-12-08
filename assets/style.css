@@ -1,3 +1,6 @@
+body {
+  height: 100vh;
+}
 h1 {
   text-align: center;
   align-items: center;
@@ -8,7 +11,9 @@ h1 {
   font-family: "Playfair Display", serif;
   border-bottom: solid black 2px;
 }
-
+.header {
+  max-height: 100vh;
+}
 #cityInput {
   max-width: 55%;
   border-bottom: 1px solid black;
@@ -17,7 +22,7 @@ h1 {
   padding: 8px;
 }
 .searchForCity {
-  
+  height: 100vh;
   margin-left: 2%;
   margin-top: 2%;
 }
@@ -25,6 +30,8 @@ h1 {
 .citySearchH2Container {
   display: flex;
   justify-content: inline;
+  max-width: 50%;
+  height: 1000px;
 }
 
 .container1 {
@@ -52,7 +59,7 @@ h1 {
   margin-top: 3%;
   position: absolute;
   display: block;
-  left: 56%;
+  left: 37%;
   top: 11%;
   font-family: 'Jost', sans-serif;
   font-size: 1rem;
@@ -60,12 +67,14 @@ h1 {
   line-height: 1.5;
   border: solid black 2px;
   max-width: 20%;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
   border-radius: 5px;
   font-weight: 100;
 }
 
- 
+.col-md-6 {
+  max-width: 40%;
+}
 
 .container1 {
   max-width: 50%;
@@ -76,6 +85,10 @@ h1 {
   margin-top: 9%;
 }
 
+.rows {
+  display: flex;
+  margin-top: 15%;
+}
 .col-sm {
   border: solid black 2px;
   background-color: #bce1ea;
@@ -87,7 +100,7 @@ h1 {
   border-radius: 5px;
   margin-top: 10%;
   position: relative;
-  left: 80%;
-  bottom: 250px;
+  left: 70%;
+  top: -200%;
   
 }
